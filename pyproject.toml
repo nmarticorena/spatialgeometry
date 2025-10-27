@@ -4,7 +4,7 @@ name = "spatialgeometry"
 
 description = "A Shape and Geometry Description Package"
 
-version = "1.1.0"
+version = "2.0.0"
 
 authors = [
     { name = "Jesse Haviland", email = "j.haviland@qut.edu.au" },
@@ -63,7 +63,7 @@ collision = ["pybullet"]
 
 dev = [
     "black",
-    "roboticstoolbox-python~=1.0.0",
+    "roboticstoolbox-python~=2.0.0",
     "swift-sim",
     "pytest",
     "pytest-cov",
@@ -76,12 +76,9 @@ docs = ["sphinx", "sphinx_rtd_theme", "sphinx-autorun"]
 
 [build-system]
 
-requires = [
-    "setuptools",
-    "oldest-supported-numpy",
-    # "numpy == 1.17.4",
-]
-build-backend = "setuptools.build_meta"
+requires = ["numpy>=2", "pybind11>=2.12", "hatchling"] #, "oldest-supported-numpy"]
+build-backend = "hatchling.build"
+
 
 
 [tool.setuptools]
