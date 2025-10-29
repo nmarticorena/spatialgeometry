@@ -75,9 +75,7 @@ docs = ["sphinx", "sphinx_rtd_theme", "sphinx-autorun"]
 
 
 [build-system]
-
-requires = ["numpy>=2", "pybind11>=2.12", "hatchling"] #, "oldest-supported-numpy"]
-build-backend = "hatchling.build"
+requires = ["numpy>=2", "pybind11>=2.12", "setuptools"] #, "oldest-supported-numpy"]
 
 
 
