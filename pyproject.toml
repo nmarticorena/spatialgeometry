@@ -75,13 +75,11 @@ docs = ["sphinx", "sphinx_rtd_theme", "sphinx-autorun"]
 
 
 [build-system]
-requires = ["numpy>=2", "pybind11>=2.12", "setuptools"] #, "oldest-supported-numpy"]
+requires = ["numpy>=2", "pybind11>=2.12", "scikit-build-core"] #, "oldest-supported-numpy"]
+build-backend = "scikit_build_core.build"
 
-
-
-[tool.setuptools]
-
-packages = ["spatialgeometry", "spatialgeometry.geom", "spatialgeometry.tools"]
+[tool.scikit-build]
+wheel.packages = ["spatialgeometry"]
 
 
 [tool.black]
